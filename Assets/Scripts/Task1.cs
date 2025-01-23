@@ -4,7 +4,7 @@ public class Task1 : MonoBehaviour
 {
     // The purpose of the code is to imput a score for every criteria and output the final challenging score of a course 
 
-
+    public string NameCourse;
     //  In engine imput the desired ammount for each criteria 
     public float ScoreModules;
     public float ScoreReadings;
@@ -22,10 +22,10 @@ public class Task1 : MonoBehaviour
     {
         // Display how much of each was input 
         Debug.Log("This course has the following Challenging scores ");
-        Debug.Log("Modules: " + ScoreModules "\n"
-                   "Reading: " + ScoreReadings "\n"
-                   "Quizz: " + ScoreReadings "\n"
-                   "Experience: " + ScoreReadings "\n");
+        Debug.Log("Modules: " + ScoreModules  + "\n" +
+                   "Reading: " + ScoreReadings + "\n" +
+                   "Quizz: " + ScoreReadings + "\n" +
+                   "Experience: " + ScoreReadings );
 
         // multiply percentage with given scores to determine final result 
         Modules *= ScoreModules;
@@ -33,14 +33,14 @@ public class Task1 : MonoBehaviour
         Quizzes *= ScoreQuizzes;
         Exp *= ScoreExp;
 
-        Debug.Log("Modules: " + Modules "\n"
-                   "Reading: " + Readings "\n"
-                   "Quizz: " + Quizzes "\n"
-                   "Experience: " + Exp "\n");
+        Debug.Log("Modules: " + Modules + "\n" + 
+                   "Reading: " + Readings + "\n" +
+                   "Quizz: " + Quizzes + "\n" +
+                   "Experience: " + Exp);
 
         // add all to find final socre
         private float FinalScore = Modules + Readings + Quizzes + Exp;
-    Debug.Log("Final challenge score: " + FinalScore);
+        Debug.Log($ " {NameCourse} Final challenge score: {FinalScore}");
 
     }
 }
